@@ -1,0 +1,387 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGNETWORK Hosting</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Exo 2 -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Exo 2', sans-serif;
+        }
+        h1, h2, h3, h4, button {
+            font-weight: 700; /* Bold for headers and buttons */
+        }
+        p, label, input, select, table, pre {
+            font-weight: 400; /* Regular for body text */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <!-- Header Section -->
+    <header class="bg-purple-600 py-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold">AGNETWORK Hosting</h1>
+            <p class="mt-2 text-lg">Reliable Hosting Solutions for Your Needs</p>
+        </div>
+    </header>
+
+    <!-- Hosting Plans Section -->
+    <section class="container mx-auto py-10">
+        <h2 class="text-3xl font-semibold text-center mb-6">Choose Your Hosting Plan</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <!-- Free Plan -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+                <h3 class="text-2xl font-bold mb-4">Free</h3>
+                <p class="text-3xl mb-4">$0<span class="text-lg">/mo</span></p>
+                <ul class="text-left mb-6">
+                    <li class="mb-2">512 MB RAM</li>
+                    <li class="mb-2">5 GB Storage</li>
+                    <li class="mb-2">999 Player Slots</li>
+                    <li class="mb-2">24/7 Uptime</li>
+                </ul>
+                <button class="bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded">Sign Up</button>
+            </div>
+            <!-- Basic Plan -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+                <h3 class="text-2xl font-bold mb-4">Basic</h3>
+                <p class="text-3xl mb-4">$5<span class="text-lg">/mo</span></p>
+                <ul class="text-left mb-6">
+                    <li class="mb-2">1 GB RAM</li>
+                    <li class="mb-2">10 GB Storage</li>
+                    <li class="mb-2">1 CPU Core</li>
+                    <li class="mb-2">24/7 Support</li>
+                </ul>
+                <button class="bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded">Sign Up</button>
+            </div>
+            <!-- Pro Plan -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center border-2 border-purple-500">
+                <h3 class="text-2xl font-bold mb-4">Pro</h3>
+                <p class="text-3xl mb-4">$15<span class="text-lg">/mo</span></p>
+                <ul class="text-left mb-6">
+                    <li class="mb-2">4 GB RAM</li>
+                    <li class="mb-2">50 GB Storage</li>
+                    <li class="mb-2">2 CPU Cores</li>
+                    <li class="mb-2">Priority Support</li>
+                </ul>
+                <button class="bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded">Sign Up</button>
+            </div>
+            <!-- Enterprise Plan -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+                <h3 class="text-2xl font-bold mb-4">Enterprise</h3>
+                <p class="text-3xl mb-4">$30<span class="text-lg">/mo</span></p>
+                <ul class="text-left mb-6">
+                    <li class="mb-2">8 GB RAM</li>
+                    <li class="mb-2">100 GB Storage</li>
+                    <li class="mb-2">4 CPU Cores</li>
+                    <li class="mb-2">Dedicated Support</li>
+                </ul>
+                <button class="bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded">Sign Up</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hosting Control Panel Section -->
+    <section class="container mx-auto py-10">
+        <h2 class="text-3xl font-semibold text-center mb-6">Hosting Control Panel</h2>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+            <!-- Login/Sign-up -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold">User Account</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                    <!-- Login Form -->
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Login</h4>
+                        <div class="mb-2">
+                            <label class="block text-sm">Username</label>
+                            <input type="text" id="login-username" class="w-full p-2 bg-gray-700 rounded text-white" placeholder="Enter username">
+                        </div>
+                        <div class="mb-2">
+                            <label class="block text-sm">Password</label>
+                            <input type="password" id="login-password" class="w-full p-2 bg-gray-700 rounded text-white" placeholder="Enter password">
+                        </div>
+                        <button onclick="handleLogin()" class="bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded">Login</button>
+                    </div>
+                    <!-- Sign-up Form -->
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Sign Up</h4>
+                        <div class="mb-2">
+                            <label class="block text-sm">Username</label>
+                            <input type="text" id="signup-username" class="w-full p-2 bg-gray-700 rounded text-white" placeholder="Choose username">
+                        </div>
+                        <div class="mb-2">
+                            <label class="block text-sm">Password</label>
+                            <input type="password" id="signup-password" class="w-full p-2 bg-gray-700 rounded text-white" placeholder="Choose password">
+                        </div>
+                        <button onclick="handleSignup()" class="bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Server Status -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold">Server Status</h3>
+                <p id="server-status" class="text-green-400">Online</p>
+                <button onclick="toggleServer()" class="bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded mt-2">Stop Server</button>
+                <button onclick="alert('Server restarting...')" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded mt-2 ml-2">Restart Server</button>
+            </div>
+            <!-- Server Management -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold">Server Management</h3>
+                <div class="mt-2">
+                    <label class="block">
+                        <input type="checkbox" id="whitelist-toggle" onchange="toggleWhitelist()"> Whitelist Enabled
+                    </label>
+                    <p id="whitelist-status" class="text-gray-400">Whitelist is Off</p>
+                </div>
+                <div class="mt-2">
+                    <label class="block text-sm">Select World</label>
+                    <select class="w-full p-2 bg-gray-700 rounded text-white">
+                        <option>world</option>
+                        <option>world_nether</option>
+                        <option>world_the_end</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Operator Management -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold">Operator Management</h3>
+                <table class="w-full text-left">
+                    <thead>
+                        <tr>
+                            <th class="p-2">Username</th>
+                            <th class="p-2">Operator Status</th>
+                            <th class="p-2">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="p-2">Player1</td>
+                            <td class="p-2 text-green-400" id="op-status-player1">Operator</td>
+                            <td class="p-2">
+                                <button onclick="deopPlayer('Player1')" class="bg-red-600 hover:bg-red-500 text-white px-2 py-1 rounded">Remove Op</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="p-2">Player2</td>
+                            <td class="p-2 text-red-400" id="op-status-player2">Not Operator</td>
+                            <td class="p-2">
+                                <button onclick="opPlayer('Player2')" class="bg-green-600 hover:bg-green-500 text-white px-2 py-1 rounded">Make Op</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Plugins Upload -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold">Plugins Upload</h3>
+                <div class="mt-2">
+                    <label class="block text-sm">Upload Plugin (.jar)</label>
+                    <input type="file" accept=".jar" id="plugin-upload" class="w-full p-2 bg-gray-700 rounded text-white">
+                    <button onclick="handlePluginUpload()" class="bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded mt-2">Upload Plugin</button>
+                </div>
+                <p class="text-sm text-gray-400 mt-2">Example: EssentialsX.jar, WorldEdit.jar</p>
+            </div>
+            <!-- File Manager -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold">File Manager</h3>
+                <div class="mt-2">
+                    <label class="block text-sm">Upload File</label>
+                    <input type="file" id="file-upload" class="w-full p-2 bg-gray-700 rounded text-white">
+                    <button onclick="handleFileUpload()" class="bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded mt-2">Upload File</button>
+                </div>
+                <ul class="list-disc pl-5 mt-4">
+                    <li class="mb-2">world.zip <button onclick="alert('Deleted world.zip')" class="bg-red-600 hover:bg-red-500 text-white px-2 py-1 rounded ml-2">Delete</button></li>
+                    <li class="mb-2">config.yml <button onclick="alert('Deleted config.yml')" class="bg-red-600 hover:bg-red-500 text-white px-2 py-1 rounded ml-2">Delete</button></li>
+                </ul>
+            </div>
+            <!-- Server Console -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold">Server Console</h3>
+                <div class="mt-2">
+                    <label class="block text-sm">Enter Command (e.g., gamemode creative)</label>
+                    <input type="text" id="console-command" class="w-full p-2 bg-gray-700 rounded text-white" placeholder="e.g., op Player1">
+                    <button onclick="handleConsoleCommand()" class="bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded mt-2">Run Command</button>
+                </div>
+                <pre id="console-output" class="bg-gray-900 p-4 rounded text-sm mt-2">Console ready...</pre>
+            </div>
+            <!-- Player Management -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold">Player Management</h3>
+                <table class="w-full text-left">
+                    <thead>
+                        <tr>
+                            <th class="p-2">Player</th>
+                            <th class="p-2">Status</th>
+                            <th class="p-2">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="p-2">Player1</td>
+                            <td class="p-2 text-green-400">Online</td>
+                            <td class="p-2">
+                                <button onclick="alert('Kicked Player1')" class="bg-red-600 hover:bg-red-500 text-white px-2 py-1 rounded mr-2">Kick</button>
+                                <button onclick="alert('Banned Player1')" class="bg-red-800 hover:bg-red-700 text-white px-2 py-1 rounded">Ban</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="p-2">Player2</td>
+                            <td class="p-2 text-red-400">Offline</td>
+                            <td class="p-2">
+                                <button onclick="alert('Kicked Player2')" class="bg-red-600 hover:bg-red-500 text-white px-2 py-1 rounded mr-2">Kick</button>
+                                <button onclick="alert('Banned Player2')" class="bg-red-800 hover:bg-red-700 text-white px-2 py-1 rounded">Ban</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Server Logs -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold">Server Logs</h3>
+                <pre class="bg-gray-900 p-4 rounded text-sm">2025-04-25 10:00: Server started
+2025-04-25 10:01: Player1 joined
+2025-04-25 10:02: Player2 disconnected</pre>
+                <button onclick="alert('Logs cleared')" class="bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded mt-2">Clear Logs</button>
+            </div>
+            <!-- Resource Usage -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold">Resource Usage</h3>
+                <p>CPU: 45%</p>
+                <p>Memory: 3.2/8 GB</p>
+            </div>
+            <!-- Settings -->
+            <div>
+                <h3 class="text-xl font-bold">Settings</h3>
+                <label class="block mt-2">
+                    <input type="checkbox" checked> Auto-Backup
+                </label>
+                <label class="block mt-2">
+                    <input type="checkbox"> Email Alerts
+                </label>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-purple-700 py-4">
+        <div class="container mx-auto text-center">
+            <p>© 2025 AGNETWORK Hosting. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactions -->
+    <script>
+        function toggleServer() {
+            const status = document.getElementById('server-status');
+            const button = event.target;
+            if (status.textContent === 'Online') {
+                status.textContent = 'Offline';
+                status.classList.remove('text-green-400');
+                status.classList.add('text-red-400');
+                button.textContent = 'Start Server';
+            } else {
+                status.textContent = 'Online';
+                status.classList.remove('text-red-400');
+                status.classList.add('text-green-400');
+                button.textContent = 'Stop Server';
+            }
+        }
+
+        function handleLogin() {
+            const username = document.getElementById('login-username').value;
+            const password = document.getElementById('login-password').value;
+            if (username && password) {
+                alert(`Logged in as ${username}!`);
+            } else {
+                alert('Please enter both username and password.');
+            }
+        }
+
+        function handleSignup() {
+            const username = document.getElementById('signup-username').value;
+            const password = document.getElementById('signup-password').value;
+            if (username && password) {
+                alert(`Signed up as ${username}!`);
+            } else {
+                alert('Please enter both username and password.');
+            }
+        }
+
+        function toggleWhitelist() {
+            const whitelistStatus = document.getElementById('whitelist-status');
+            const whitelistToggle = document.getElementById('whitelist-toggle');
+            if (whitelistToggle.checked) {
+                whitelistStatus.textContent = 'Whitelist is On';
+                whitelistStatus.classList.remove('text-gray-400');
+                whitelistStatus.classList.add('text-green-400');
+            } else {
+                whitelistStatus.textContent = 'Whitelist is Off';
+                whitelistStatus.classList.remove('text-green-400');
+                whitelistStatus.classList.add('text-gray-400');
+            }
+        }
+
+        function handlePluginUpload() {
+            const pluginInput = document.getElementById('plugin-upload');
+            if (pluginInput.files.length > 0) {
+                alert(`Uploaded plugin: ${pluginInput.files[0].name}`);
+            } else {
+                alert('Please select a .jar file to upload.');
+            }
+        }
+
+        function handleFileUpload() {
+            const fileInput = document.getElementById('file-upload');
+            if (fileInput.files.length > 0) {
+                alert(`Uploaded file: ${fileInput.files[0].name}`);
+            } else {
+                alert('Please select a file to upload.');
+            }
+        }
+
+        function handleConsoleCommand() {
+            const commandInput = document.getElementById('console-command');
+            const consoleOutput = document.getElementById('console-output');
+            let command = commandInput.value.trim();
+            if (command) {
+                if (!command.startsWith('/')) {
+                    command = '/' + command;
+                }
+                consoleOutput.textContent += `\n${command}\nCommand executed successfully.`;
+                commandInput.value = '';
+            } else {
+                alert('Please enter a command.');
+            }
+        }
+
+        function opPlayer(username) {
+            const statusElement = document.getElementById(`op-status-${username.toLowerCase()}`);
+            alert(`${username} opped!`);
+            statusElement.textContent = 'Operator';
+            statusElement.classList.remove('text-red-400');
+            statusElement.classList.add('text-green-400');
+            const button = statusElement.parentElement.nextElementSibling.querySelector('button');
+            button.textContent = 'Remove Op';
+            button.classList.remove('bg-green-600', 'hover:bg-green-500');
+            button.classList.add('bg-red-600', 'hover:bg-red-500');
+            button.onclick = () => deopPlayer(username);
+        }
+
+        function deopPlayer(username) {
+            const statusElement = document.getElementById(`op-status-${username.toLowerCase()}`);
+            alert(`${username} deopped!`);
+            statusElement.textContent = 'Not Operator';
+            statusElement.classList.remove('text-green-400');
+            statusElement.classList.add('text-red-400');
+            const button = statusElement.parentElement.nextElementSibling.querySelector('button');
+            button.textContent = 'Make Op';
+            button.classList.remove('bg-red-600', 'hover:bg-red-500');
+            button.classList.add('bg-green-600', 'hover:bg-green-500');
+            button.onclick = () => opPlayer(username);
+        }
+    </script>
+</body>
+</html>
